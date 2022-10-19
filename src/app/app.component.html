@@ -1,51 +1,51 @@
 <div class="game-container">
-  <div class="panel player-panel" id="player1panel">
+  <div class="panel player-panel" id="player{{ firstPlayer.id }}panel">
     <div class="player-game-panel">
       <div class="player-name-container">
-        <span id="player1name">PLAYER 1</span>
-        <div class="player-selected-circle hidden" id="player1circle"></div>
+        <span id="player{{ firstPlayer.id }}name">PLAYER {{ firstPlayer.id }}</span>
+        <div class="player-selected-circle hidden" id="player{{ firstPlayer.id }}circle"></div>
       </div>
       <div class="player-game-score-container">
-        <span>0</span>
+        <span>{{ firstPlayer.gameScore }}</span>
       </div>
     </div>
     <div class="player-round-panel">
       <span>CURRENT</span>
-      <span class="player-round-score">0</span>
+      <span class="player-round-score">{{ firstPlayer.roundScore }}</span>
     </div>
   </div>
   <div class="panel middle-panel">
-    <div class="middle-panel-button">
+    <div class="middle-panel-button" (click)="startNewGame();">
       <mat-icon>add_circle_outline</mat-icon>
       <span>NEW GAME</span>
     </div>
     <div class="dice-container">
-      <img src="/assets/images/6.png" alt="dice">
+      <img src="/assets/images/{{ selectedDice }}.png" alt="dice" *ngIf="selectedDice !== 0">
     </div>
     <div class="game-controls-container">
-      <div class="middle-panel-button">
+      <div class="middle-panel-button" (click)="rollDice();">
         <mat-icon>cached</mat-icon>
         <span>ROLL DICE</span>
       </div>
-      <div class="middle-panel-button">
+      <div class="middle-panel-button" (click)="hold(selectedPlayer)">
         <mat-icon>save_alt</mat-icon>
         <span>HOLD</span>
       </div>
     </div>
   </div>
-  <div class="panel player-panel" id="player2panel">
+  <div class="panel player-panel" id="player{{ secondPlayer.id }}panel">
     <div class="player-game-panel">
       <div class="player-name-container">
-        <span id="player2name">PLAYER 2</span>
-        <div class="player-selected-circle hidden" id="player2circle"></div>
+        <span id="player{{ secondPlayer.id }}name">PLAYER {{ secondPlayer.id }}</span>
+        <div class="player-selected-circle hidden" id="player{{ secondPlayer.id }}circle"></div>
       </div>
       <div class="player-game-score-container">
-        <span>0</span>
+        <span>{{ secondPlayer.gameScore }}</span>
       </div>
     </div>
     <div class="player-round-panel">
       <span>CURRENT</span>
-      <span class="player-round-score">0</span>
+      <span class="player-round-score">{{ secondPlayer.roundScore }}</span>
     </div>
   </div>
 </div>

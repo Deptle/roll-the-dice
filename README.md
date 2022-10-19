@@ -1,27 +1,33 @@
-# RollTheDice
+# Roll The Dice!
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
+Roll The Dice! is a turn-based Multiplayer game in which the players must roll a dice to accumulate as many points as possible.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## How to Play (Rules)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In order to win, a player needs to accumulate 100 points before his opponent.
+In each round, the player whose turn it is must roll a dice, and whatever number
+it lands on, is the amount of points that the player will start accumulating
+for the round. However, if the dice lands on 1, the player will lose the round, and
+it's the next player's turn.
 
-## Build
+If it doesn't, the player has two options:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Take the points home, and let their opponent attempt to accumulate points
+- Roll the dice again, and try to accumulate more points, risking all the points they've earned for the current round
 
-## Running unit tests
+#### Note:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+There is no limit to how many times a player can roll the dice before the round ends.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Features
 
-## Further help
+- Multiplayer (Turn-based)
+- Live Score Counters
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Preview
+
+[Click here to access the preview](https://rollthedice-studi.netlify.app/)

@@ -1,0 +1,116 @@
+.game-container {
+  @apply bg-white;
+  @apply flex;
+  @apply flex-row;
+  @apply h-[70vh] w-[80vw];
+
+  @apply xl:w-[60vw];
+
+  .panel {
+    @apply flex;
+    @apply flex-col;
+    @apply h-full w-1/2;
+    @apply justify-start;
+    @apply items-center;
+
+    .player-name-container {
+      @apply flex flex-row;
+      @apply justify-between items-center;
+      @apply h-fit w-fit;
+      @apply text-5xl font-thin;
+
+      .player-selected-circle {
+        @apply bg-primary;
+        @apply h-4 w-4;
+        @apply rounded-full;
+        @apply m-3;
+      }
+    }
+  }
+
+  .player-panel {
+    @apply flex;
+    @apply pt-[10%] pb-28;
+    @apply flex-col;
+    @apply justify-between;
+
+    .player-game-panel {
+      @apply h-fit;
+
+      .player-game-score-container {
+        @apply flex;
+        @apply justify-center;
+        @apply text-primary text-8xl font-extralight;
+        @apply pt-4;
+      }
+    }
+
+    .player-round-panel {
+      @apply bg-primary;
+      @apply py-3 px-6;
+      @apply flex flex-col;
+      @apply items-center;
+
+      .player-round-score {
+        @apply text-white text-3xl font-light pt-2;
+      }
+    }
+
+
+  }
+
+  .middle-panel {
+    @apply flex;
+    @apply justify-between;
+    @apply w-0;
+
+    mat-icon {
+      transform: scale(1.2);
+      @apply text-primary;
+      @apply mr-4;
+    }
+    @apply flex-col;
+    @apply pt-16 pb-28;
+
+    .middle-panel-button {
+      @apply flex flex-row;
+      @apply justify-center items-center;
+      @apply text-2xl font-light;
+      @apply h-fit w-fit;
+      @apply min-w-[172px];
+      @apply z-[1];
+
+      &:hover {
+        mat-icon {
+          transform: scale(1.25);
+        }
+
+        @apply cursor-pointer;
+        @apply font-normal;
+      }
+
+      &:active {
+        mat-icon {
+          transform: scale(1.2);
+        }
+        @apply font-light;
+      }
+    }
+
+    .dice-container {
+      @apply h-32 w-32;
+      @apply z-[1];
+
+      img {
+        box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .game-controls-container {
+      @apply flex flex-col;
+      @apply h-20;
+      @apply justify-between;
+    }
+
+  }
+}

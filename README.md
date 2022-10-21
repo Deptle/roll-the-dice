@@ -2,6 +2,9 @@
 
 Roll The Dice! is a turn-based Multiplayer game in which the players must roll a dice to accumulate as many points as possible.
 
+## Installation
+
+Run `npm install` in the root directory
 
 ## How to Play (Rules)
 

@@ -47,6 +47,7 @@ export class AppComponent {
     this.selectedPlayer = this.secondPlayer;
 
     this.gameID = 0;
+    this.isGameStarted = this.gameID !== 0;
 
     this.selectedDice = 0;
 
